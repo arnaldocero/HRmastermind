@@ -49,36 +49,7 @@ const questions = [
         answers: ["Realizar una encuesta a los empleados para obtener su opinión.", "Implementarla de inmediato para satisfacer a los empleados.", "Rechazar la idea debido a preocupaciones de control.", "Probarla en un equipo pequeño antes de implementarla por completo."],
         correctAnswer: "Realizar una encuesta a los empleados para obtener su opinión."
     },
-    {
-        question: "La empresa está experimentando una alta rotación de empleados. Debes tomar medidas para retener a los talentos clave.",
-        answers: ["Realizar encuestas de satisfacción y mejorar las condiciones de trabajo según los resultados.", "Aumentar los salarios y beneficios para todos los empleados.", "Identificar a los empleados más valiosos y ofrecerles bonificaciones y promociones.", "No tomar medidas y asumir que la rotación es inevitable."],
-        correctAnswer: "Realizar encuestas de satisfacción y mejorar las condiciones de trabajo según los resultados."
-    },
-    {
-        question: "La productividad en la empresa ha disminuido recientemente. Debes tomar medidas para mejorarla.",
-        answers: ["Implementar un sistema de incentivos basado en el rendimiento.", "Contratar más personal para aliviar la carga de trabajo.", "Realizar capacitaciones para mejorar las habilidades de los empleados.", "Reducir las horas de trabajo de los empleados."],
-        correctAnswer: "Realizar capacitaciones para mejorar las habilidades de los empleados."
-    },
-    {
-        question: "La empresa planea implementar un cambio importante en la estructura organizativa. Gestiona la transición de manera efectiva.",
-        answers: ["Anunciar el cambio de inmediato sin una comunicación previa.", "Formar un equipo de líderes para planificar y comunicar el cambio gradualmente.", "Ignorar el cambio y esperar a ver cómo reaccionan los empleados.", "Cancelar el cambio por completo para evitar conflictos."],
-        correctAnswer: "Formar un equipo de líderes para planificar y comunicar el cambio gradualmente."
-    },
-    {
-        question: "La empresa ha lanzado un programa de capacitación y desarrollo para empleados. Debes decidir cómo implementarlo.",
-        answers: ["Implementar un programa de capacitación a medida para cada empleado, basado en sus necesidades y metas.", "Ofrecer capacitación solo a empleados de nivel ejecutivo.", "Cancelar el programa de capacitación debido a limitaciones presupuestarias", "Realizar una capacitación genérica para todos los empleados, sin personalización."],
-        correctAnswer: "Implementar un programa de capacitación a medida para cada empleado, basado en sus necesidades y metas."
-    },
-    {
-        question: "Es tiempo de realizar las evaluaciones de desempeño anuales de los empleados. Decidir cómo abordar estas revisiones.",
-        answers: ["Realizar evaluaciones de desempeño rápidas sin una retroalimentación detallada.", "Posponer las evaluaciones de desempeño indefinidamente debido a la carga de trabajo", "Programar reuniones de revisión de desempeño individuales con cada empleado.", "Realizar evaluaciones de desempeño pero sin dar aumentos salariales."],
-        correctAnswer: "Programar reuniones de revisión de desempeño individuales con cada empleado."
-    },
-    {
-        question: "La empresa busca identificar y desarrollar líderes internos para futuros roles de liderazgo.",
-        answers: ["Contratar líderes externos con experiencia.", "Promover a los empleados con más tiempo en la empresa, independientemente de sus habilidades de liderazgo.", "Implementar un programa de desarrollo de liderazgo interno.", "Ignorar el desarrollo de líderes y confiar en el liderazgo actual."],
-        correctAnswer: "Implementar un programa de desarrollo de liderazgo interno."
-    },
+    
     // Agrega más preguntas aquí
 ];
 
@@ -88,7 +59,7 @@ const questionElement = document.getElementById("question");
 const answersElement = document.getElementById("answers");
 const resultElement = document.getElementById("result");
 const nextButton = document.getElementById("next");
-const nextButton1 = document.getElementById("next1");
+const nextButton1 = document.getElementById("botonsigiengenera");
 const sigButton = document.getElementById("flechimage");
 const titulotext = document.getElementById("titulo");
 
@@ -126,7 +97,13 @@ function checkAnswer(selectedAnswer, correctAnswer) {
     var modalText = document.getElementById('modalText');
 
     // Configura la imagen y el texto dinámico
-    modalImage.src = 'aplausos-4.gif'; // Reemplaza 'ruta_de_la_imagen.jpg' con la URL de tu imagen
+    modalImage.src = 'happy.gif'; // Reemplaza 'ruta_de_la_imagen.jpg' con la URL de tu imagen
+    document.getElementById('demo').play();
+      document.getElementById('demo').volume = 0.9;
+      setTimeout(() => {
+        document.getElementById('demo').pause();
+        document.getElementById('demo').currentTime=0;
+      }, 3500);
     modalText.innerHTML = '';
 
     modal.style.display = 'block';
@@ -145,9 +122,13 @@ nextButton.addEventListener("click", () => {
     if (currentQuestionIndex < questions.length) {
         loadQuestion();
     } else {
-        questionElement.textContent = "¡Felicidades! Has ganado un millón de dólares.";
+        questionElement.textContent = "Final!.";
         answersElement.innerHTML = "";
         nextButton.style.display = "none";
+        document.getElementById("preguntas1").style.display = "none";
+         document.getElementById("preguntas2").style.display = "none";
+         document.getElementById("preguntas3").style.display = "none";
+         document.getElementById("preguntas4").style.display = "none";
     }
 });
 sigButton.addEventListener("click", () => {
@@ -157,9 +138,13 @@ sigButton.addEventListener("click", () => {
     if (currentQuestionIndex < questions.length) {
         loadQuestion();
     } else {
-        questionElement.textContent = "¡Felicidades! Has ganado un millón de dólares.";
+        questionElement.textContent = "¡Final.";
         answersElement.innerHTML = "";
         nextButton.style.display = "none";
+         document.getElementById("preguntas1").style.display = "none";
+         document.getElementById("preguntas2").style.display = "none";
+         document.getElementById("preguntas3").style.display = "none";
+         document.getElementById("preguntas4").style.display = "none";
     }
 });
 nextButton1.addEventListener("click", () => {
@@ -200,7 +185,13 @@ function veropcion(selectedAnswer) {
     var modalText = document.getElementById('modalText');
 
     // Configura la imagen y el texto dinámico
-    modalImage.src = 'carita.gif'; // Reemplaza 'ruta_de_la_imagen.jpg' con la URL de tu imagen
+    modalImage.src = 'sad.gif'; // Reemplaza 'ruta_de_la_imagen.jpg' con la URL de tu imagen
+    document.getElementById('demo2').play();
+      document.getElementById('demo2').volume = 0.9;
+      setTimeout(() => {
+        document.getElementById('demo2').pause();
+        document.getElementById('demo2').currentTime=0;
+      }, 3500);
     if(selectedAnswer=='Conceder la solicitud de trabajo remoto.'){
         modalText.innerHTML = 'Conceder la solicitud de inmediato podría tener un impacto desconocido en la productividad.';
     }else if (selectedAnswer=='Negar la solicitud y sugerir horarios flexibles.'){
@@ -220,7 +211,7 @@ function veropcion(selectedAnswer) {
     }else if (selectedAnswer=='Tomar medidas disciplinarias inmediatas.'){
         modalText.innerHTML = 'Tomar medidas disciplinarias sin entender  puede ser injusto y empeorar el ambiente laboral.';
     }else if(selectedAnswer=='Realizar evaluaciones de desempeño rápidas sin una retroalimentación detallada.'){
-        modalText.innerHTML = 'Los empleados pueden sentirse desvalorizados y su desempeño podría no mejorar.';
+        modalText.innerHTML = 'Programar reuniones de revisión de desempeño individuales con cada empleado.';
     }else if (selectedAnswer=='Posponer las evaluaciones de desempeño indefinidamente debido a la carga de trabajo.'){
         modalText.innerHTML = 'La falta de evaluaciones puede llevar a la insatisfacción de los empleados y problemas de desarrollo.';
     }else if (selectedAnswer=='Realizar evaluaciones de desempeño pero sin dar aumentos salariales.'){
@@ -231,9 +222,40 @@ function veropcion(selectedAnswer) {
         modalText.innerHTML = 'Contratar a alguien no calificado podría afectar la productividad.';
     }else if (selectedAnswer=='Externalizar el proceso de contratación a una empresa de selección de personal.'){
         modalText.innerHTML = 'Externalizar la contratación puede ser costoso y no garantizar la calidad.';
+    }else if(selectedAnswer=='Ignorar la queja para evitar conflictos.'){
+        modalText.innerHTML = 'Ignorar la queja puede crear un ambiente laboral tóxico y podría llevar a demandas.';
+    }else if (selectedAnswer=='Sancionar al empleado acusado sin investigar.'){
+        modalText.innerHTML = 'Sancionar sin investigación podría ser injusto y resultar en problemas legales.';
+    }else if (selectedAnswer=='Tomar medidas legales sin una investigación completa.'){
+        modalText.innerHTML = 'Tomar medidas legales sin una investigación completa puede ser prematuro y costoso.';
+    }else if(selectedAnswer=='Aumentar los salarios de todos los empleados para motivarlos.'){
+        modalText.innerHTML = 'Aumentar los salarios sin justificación puede afectar negativamente el presupuesto.';
+    }else if (selectedAnswer=='Ignorar las evaluaciones este año debido a la carga de trabajo.'){
+        modalText.innerHTML = 'Ignorar las evaluaciones podría disminuir la motivación y el desarrollo.';
+    }else if (selectedAnswer=='Reducir los salarios de los empleados con bajo desempeño.'){
+        modalText.innerHTML = 'Reducir salarios sin un proceso adecuado puede ser injusto y perjudicial para su ambiente laboral';
+    }else if(selectedAnswer=='Ignorar la renuncia y esperar a que el empleado cambie de opinión.'){
+        modalText.innerHTML = 'Ignorar la renuncia podría resultar en una pérdida de conocimiento crítico.';
+    }else if (selectedAnswer=='Buscar un reemplazo de inmediato.'){
+        modalText.innerHTML = 'Buscar un reemplazo sin un plan puede llevar a contrataciones apresuradas.';
+    }else if (selectedAnswer=='Ofrecer un aumento sustancial para retener al empleado.'){
+        modalText.innerHTML = 'Ofrecer un aumento sin considerar el plan a largo plazo puede no ser sostenible.';
+    }else if(selectedAnswer=='Realizar despidos masivos.'){
+        modalText.innerHTML = 'Los empleados que mantienen sus empleos se les reduce su moral y el estrés en el lugar de trabajo aumenta.';
+    }else if (selectedAnswer=='Incentivar a los empleados a tomar vacaciones no remuneradas.'){
+        modalText.innerHTML = 'Esta decisión es tanto ética como legalmente incorrecta';
+    }else if (selectedAnswer=='Congelar las contrataciones futuras y reducir el presupuesto de capacitación.'){
+        modalText.innerHTML = 'Es importante comunicar de manera efectiva esta decisión para minimizar la resistencia de los empleados.';
+    }else if(selectedAnswer=='Implementarla de inmediato para satisfacer a los empleados.'){
+        modalText.innerHTML = 'Implementar de inmediato podría tener implicaciones no previstas.';
+    }else if (selectedAnswer=='Rechazar la idea debido a preocupaciones de control.'){
+        modalText.innerHTML = 'Rechazar sin considerar la opinión de los empleados podría generar descontento.';
+    }else if (selectedAnswer=='Probarla en un equipo pequeño antes de implementarla por completo.'){
+        modalText.innerHTML = 'Realizar una encuesta es la mejor opción, pues tiene la opinión de todos los empleados.';
     }
     
 
     modal.style.display = 'block';
 }
+      
 loadQuestion();

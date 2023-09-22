@@ -207,3 +207,11 @@ div.card-missueno {
     border-style: solid;
     width: 26%;
 }
+#botonsigiengenera{
+    position: absolute;
+    top: 75%;
+    left: 30%;
+}
+#imgsiguienteg{
+    width: 34%;
+}

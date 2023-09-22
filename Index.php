@@ -31,7 +31,8 @@
         </div>
         <div id="result"></div>
         <button id="next">Siguiente Pregunta</button>   
-        <button id="next1">Siguiente</button>   
+       
+        <div id="botonsigiengenera"><img id="imgsiguienteg" src="siguiente.png"/></span></div>
 
     </div>
     </div>
@@ -45,6 +46,11 @@
             <p id="modalText">Texto dinámico</p>
         </div>
     </div>
+    <audio id="demo" src="Appls20PeoplePolit PE945202.wav"></audio>
+    <audio id="demo1" src="Game Success.wav"></audio>
+    <audio id="demo2" src="Gamers Fail Game.wav"></audio>
+    <audio id="demo3" src="Rewarding Intro.wav"></audio>
+                                    
     <script src="script.js"></script>
 </body>
 </html>
