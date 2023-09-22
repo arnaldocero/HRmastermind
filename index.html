@@ -11,6 +11,7 @@
     <div class="card">
     <div id="pmc" class="card-body card-missueno">
     <h1 id="titulo">HR mastermind</h1>
+    <div id="logodiv"><img id="imglogo" src="HR-MASTERMIND.png"/></span></div>
         <div id="question-container">
             <div id="panelquestion">
             <p id="question">Pregunta:</p>
