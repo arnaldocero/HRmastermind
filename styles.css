@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    /*max-width: 600px;*/
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+#question-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#question {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#answers {
+    list-style-type: none;
+    padding: 0;
+}
+
+#answers li {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#next {
+    display: none;
+    margin-top: 20px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(134,140,151,.24);
+    border-radius: 3px;
+}
+.card {
+    margin-bottom: 1.25rem;
+    box-shadow: rgba(53,64,82,.04) 0 2px 4px 0;
+}
+div.card-missueno {
+    background-image: url(fondo.jpg);
+    /* background-color: gainsboro; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 640px;
+    margin-left: -1.5%;
+    position: relative;
+    width: 1294px;
+    margin-top: -2%
+}
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem 1.25rem;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para el botón de cerrar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para las imágenes */
+.modal-image {
+    max-width: 100%;
+    height: auto;
+}
