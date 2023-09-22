@@ -88,20 +88,30 @@ const questionElement = document.getElementById("question");
 const answersElement = document.getElementById("answers");
 const resultElement = document.getElementById("result");
 const nextButton = document.getElementById("next");
+const nextButton1 = document.getElementById("next1");
+const sigButton = document.getElementById("flechimage");
+const titulotext = document.getElementById("titulo");
 
 function loadQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
-    questionElement.textContent = `Pregunta ${currentQuestionIndex + 1}: ${currentQuestion.question}`;
+    questionElement.textContent = `${currentQuestion.question}`;
+    titulotext.textContent = `Pregunta ${currentQuestionIndex + 1}`;
     
     // Limpia las respuestas anteriores
     answersElement.innerHTML = "";
     
     // Crea botones para las respuestas
+    let i=1;
     currentQuestion.answers.forEach((answer, index) => {
-        const answerButton = document.createElement("button");
+        /*const answerButton = document.createElement("button");
         answerButton.textContent = answer;
         answerButton.addEventListener("click", () => checkAnswer(answer, currentQuestion.correctAnswer));
-        answersElement.appendChild(answerButton);
+        answersElement.appendChild(answerButton);*/
+        const Buttonanswr = document.getElementById("answr"+i);
+        Buttonanswr.textContent = answer;
+        const Buttonanswrd = document.getElementById("preguntas"+i);
+        Buttonanswrd.addEventListener("click", () => checkAnswer(answer, currentQuestion.correctAnswer));
+        i++;
     });
     
     // Oculta el botón "Siguiente Pregunta" después de responder
@@ -125,7 +135,7 @@ function checkAnswer(selectedAnswer, correctAnswer) {
     }
     
     // Muestra el botón "Siguiente Pregunta"
-    nextButton.style.display = "block";
+    nextButton.style.display = "none";
 }
 
 nextButton.addEventListener("click", () => {
@@ -139,6 +149,24 @@ nextButton.addEventListener("click", () => {
         answersElement.innerHTML = "";
         nextButton.style.display = "none";
     }
+});
+sigButton.addEventListener("click", () => {
+    currentQuestionIndex++;
+    resultElement.textContent = "";
+    
+    if (currentQuestionIndex < questions.length) {
+        loadQuestion();
+    } else {
+        questionElement.textContent = "¡Felicidades! Has ganado un millón de dólares.";
+        answersElement.innerHTML = "";
+        nextButton.style.display = "none";
+    }
+});
+nextButton1.addEventListener("click", () => {
+    document.getElementById('question-container').style.display='block';
+    document.getElementById('pmc').style.backgroundImage='url(fondo.jpg)';
+    nextButton1.style.display="none";
+    document.getElementById('titulo').style.display='block';
 });
 
 function mostrarModal(tipo) {

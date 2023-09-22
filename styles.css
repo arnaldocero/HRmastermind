@@ -14,15 +14,41 @@ h1 {
 }
 
 #question-container {
-    background-color: #f2f2f2;
+    /*background-color: #f2f2f2;*/
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
+    display: none;
+    height: 117%;
+    width: 98%;
+    
+}
+#panelquestion {
+    background-image:url('ELEMENTO-PREGUNTAS.png');
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: block;
+    background-size: cover;
+    height: 52%;
+}
+#titulo{
+    display: none;
+    font-size: 34px;
+    margin-bottom: -4%;
+    margin-top: 1%;
+    position: absolute;
+    top: 14%;
+    left: 44%;
 }
 
 #question {
-    font-size: 18px;
+    font-size: 29px;
     margin-bottom: 10px;
+    position: absolute;
+    top: 38%;
+    left: 15%;
+    width: 69%;
 }
 
 #answers {
@@ -44,6 +70,7 @@ button {
     margin-right: 2%;
     margin-top: 1%;
 }
+
 
 button:hover {
     background-color: #0056b3;
@@ -75,7 +102,7 @@ button:hover {
     box-shadow: rgba(53,64,82,.04) 0 2px 4px 0;
 }
 div.card-missueno {
-    background-image: url(fondo.jpg);
+    background-image: url(portada.jpg);
     /* background-color: gainsboro; */
     background-position: center;
     background-repeat: no-repeat;
@@ -125,4 +152,58 @@ div.card-missueno {
 .modal-image {
     max-width: 100%;
     height: auto;
+}
+#flechimage{
+    position: absolute;
+    left: 88.5%;
+    top: 41%;
+    /* width: 8%;*/
+}
+#imgsiguiente{
+    width: 54%;
+}
+#preguntas1{
+    background-color: #85bb32;
+    position: absolute;
+    top: 76%;
+    border-radius: 25px;
+    padding: 7px 10px 7px 10px;
+    border-color: #000000;
+    border-style: solid;
+    width: 26%;
+    left:13%
+}
+#preguntas2{
+    background-color: #e0f9f5;
+    position: absolute;
+    top: 76%;
+    left: 59%;
+    border-radius: 25px;
+    padding: 7px 10px 7px 10px;
+    border-color: #000000;
+    border-style: solid;
+    width: 26%;
+    
+}
+#preguntas3{
+    background-color: #e784c4;
+    position: absolute;
+    top: 87%;
+    border-radius: 25px;
+    padding: 7px 10px 7px 10px;
+    border-color: #000000;
+    border-style: solid;
+    width: 26%;
+    left:13%
+}
+#preguntas4{
+    background-color: #dbbe16;
+    position: absolute;
+    top: 87%;
+    left: 59%;
+    border-radius: 25px;
+    padding: 7px 10px 7px 10px;
+    border-color: #000000;
+    border-style: solid;
+    width: 26%;
 }

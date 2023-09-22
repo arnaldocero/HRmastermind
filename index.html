@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Quién quiere ser millonario</title>
+    <title>HR mastermind</title>
 </head>
 <body>
     <div class="container">
     <div class="card">
-    <div class="card-body card-missueno">
-    <h1>HR mastermind</h1>
+    <div id="pmc" class="card-body card-missueno">
+    <h1 id="titulo">HR mastermind</h1>
         <div id="question-container">
+            <div id="panelquestion">
             <p id="question">Pregunta:</p>
+            <div id="flechimage"> 
+                <img id="imgsiguiente" src="SIGUIENTE-1.png"/>
+            </div>
+         </div>
             <ul id="answers">
                 <li><button id="answer1" ></button></li>
                 <li><button id="answer2"></button></li>
                 <li><button id="answer3"></button></li>
                 <li><button id="answer4"></button></li>
             </ul>
+            <div id="preguntas1"><span id="answr1"></span></div>
+            <div id="preguntas2"><span id="answr2"></span></div>
+            <div id="preguntas3"><span id="answr3"></span></div>
+            <div id="preguntas4"><span id="answr4"></span></div>
         </div>
         <div id="result"></div>
-        <button id="next">Siguiente Pregunta</button>     
+        <button id="next">Siguiente Pregunta</button>   
+        <button id="next1">Siguiente</button>   
 
     </div>
     </div>
