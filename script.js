@@ -152,6 +152,7 @@ nextButton1.addEventListener("click", () => {
     document.getElementById('pmc').style.backgroundImage='url(fondo.jpg)';
     nextButton1.style.display="none";
     document.getElementById('titulo').style.display='block';
+    document.getElementById('logodiv').style.display='block';
 });
 
 function mostrarModal(tipo) {

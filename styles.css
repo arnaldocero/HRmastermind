@@ -215,3 +215,12 @@ div.card-missueno {
 #imgsiguienteg{
     width: 34%;
 }
+#logodiv{
+position: absolute;
+top:0%;
+left: 0%;
+display: none;
+}
+#imglogo{
+width: 20%;
+}
